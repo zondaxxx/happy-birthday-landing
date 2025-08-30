@@ -36,13 +36,23 @@ export default function Index() {
 
           {/* Photo */}
           <div className="relative mb-6">
-            <div className="relative w-full h-[220px] sm:h-[280px] rounded-[20px] overflow-hidden bg-primary">
+            <div className="relative w-full h-[280px] rounded-[20px] overflow-hidden bg-primary">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2Fe5f1f06da3804a0cae212b2b480205a0?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2Fa5e81d1a186e4e9680f767274db50827?format=webp&width=800"
                 alt="Birthday celebration"
-                className="w-full h-full object-cover object-[30%_50%]"
+                className="w-full h-full object-contain object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] opacity-10" />
+              <div
+                className="absolute"
+                style={{
+                  left: 46,
+                  right: 0,
+                  top: 664,
+                  bottom: 0,
+                  backgroundImage: "linear-gradient(to right bottom, #2D5A3D, #4A7C59)",
+                  opacity: 0.1,
+                }}
+              />
             </div>
           </div>
 
