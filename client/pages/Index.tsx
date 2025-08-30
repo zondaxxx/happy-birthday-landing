@@ -75,7 +75,7 @@ export default function Index() {
                 className="w-full rounded-[12px] py-3 px-6 text-[16px] sm:text-[18px] font-medium tracking-[-0.5px] text-[#E8F5E8] transition-all duration-300 bg-[#2D5A3D] hover:bg-[#4A7C59] active:-translate-y-px"
                 aria-expanded={showDetails}
               >
-                {showDetails ? "Скрыть детали" : "Показать детали"}
+                {showDetails ? "Скрыть детали" : "Показа��ь детали"}
               </button>
             </div>
 
@@ -86,31 +86,22 @@ export default function Index() {
                     <DialogTitle className="text-primary">Детали</DialogTitle>
                   </DialogHeader>
                   <div className="mt-2 p-4 rounded-[12px] border" style={{ backgroundColor: "hsl(120 40% 97%)", borderColor: "hsl(var(--border))" }}>
-                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">Дополнительная информация:</h4>
-                    <ul className="text-[14px] leading-[120%] tracking-[-0.4px] text-secondary space-y-1 list-none">
-                      <li>• Дресс-код: нарядная одежда</li>
-                      <li>• Будет фотограф и музыка</li>
-                      <li>• Угощения и торт включены</li>
-                      <li>• Парковка доступна рядом</li>
-                      <li>• Подтвердите участие до 18.09</li>
+                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">О ресторане (Остерия Марио, м. Щёлковская)</h4>
+                    <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
+                      <li><span className="text-primary">Адрес:</span> Щёлковское ш., 75, ТРЦ «Щёлковский», 3 этаж</li>
+                      <li><span className="text-primary">Метро:</span> Щёлковская</li>
+                      <li><span className="text-primary">Телефон:</span> +7 (495) 790-70-90 доб. 223</li>
+                      <li><span className="text-primary">Часы:</span> Вс–Чт 10:00–22:00, Пт–Сб 10:00–23:00</li>
+                      <li><span className="text-primary">Кухня:</span> итальянская, пицца, паста, антипасти</li>
+                      <li><span className="text-primary">Сайт:</span> <a className="underline text-secondary" href="https://www.osteria-mario.com" target="_blank" rel="noreferrer">osteria-mario.com</a></li>
                     </ul>
-                    <div className="mt-3 pt-3 border-t" style={{ borderColor: "hsl(var(--border))" }}>
-                      <h5 className="text-[14px] font-semibold tracking-[-0.4px] text-primary mb-2">О ресторане (Остерия Марио, м. Щёлковская)</h5>
-                      <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
-                        <li><span className="text-primary">Адрес:</span> Щёлковское ш., 75, ТРЦ «Щёлковский», 3 этаж</li>
-                        <li><span className="text-primary">Метро:</span> Щёлковская</li>
-                        <li><span className="text-primary">Телефон:</span> +7 (495) 790-70-90 доб. 223</li>
-                        <li><span className="text-primary">Часы:</span> Вс–Чт 10:00–22:00, Пт–Сб 10:00–23:00</li>
-                        <li><span className="text-primary">Кухня:</span> итальянская, пицца, паста, антипасти</li>
-                        <li><span className="text-primary">Сайт:</span> <a className="underline text-secondary" href="https://www.osteria-mario.com" target="_blank" rel="noreferrer">osteria-mario.com</a></li>
-                      </ul>
-                      <div className="mt-3 overflow-x-auto">
-                        <div className="flex gap-3 snap-x snap-mandatory"></div>
+                    <div className="mt-4">
+                      <h5 className="text-[14px] font-semibold tracking-[-0.4px] text-primary mb-2">Фотографии с Яндекс Карт</h5>
+                      <div className="overflow-x-auto -mx-1 px-1">
+                        <div className="flex gap-3 snap-x snap-mandatory">
+                          {/* Вставлю прямые ссылки на фото с Яндекс Карт после подтверждения */}
+                        </div>
                       </div>
-                    </div>
-                    <div className="mt-3 pt-3 border-t" style={{ borderColor: "hsl(var(--border))" }}>
-                      <p className="text-[14px] font-medium tracking-[-0.4px] text-primary">Контакт для вопросов:</p>
-                      <p className="text-[14px] tracking-[-0.4px] text-secondary">+7 (999) 123-45-67</p>
                     </div>
                   </div>
                 </div>
