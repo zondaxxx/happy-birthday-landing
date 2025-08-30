@@ -16,7 +16,7 @@ export default function Index() {
           <path d="M75 150C75 177.614 97.386 200 125 200H300V100H125C97.386 100 75 122.386 75 150Z" fill="#4A7C59" />
         </svg>
 
-        <div className="relative z-10 h-full flex flex-col p-8">
+        <div className="relative z-10 h-full flex flex-col p-6 sm:p-8">
           {/* Heading */}
           <div className="text-center mb-6">
             <h3 className="text-[32px] font-normal leading-[120%] tracking-[-1px] text-primary">
@@ -36,7 +36,7 @@ export default function Index() {
 
           {/* Photo */}
           <div className="relative mb-6">
-            <div className="relative w-full h-[280px] rounded-[20px] overflow-hidden bg-primary">
+            <div className="relative w-full h-[220px] sm:h-[280px] rounded-[20px] overflow-hidden bg-primary">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2Fa5e81d1a186e4e9680f767274db50827?format=webp&width=800"
                 alt="Birthday celebration"
@@ -60,13 +60,13 @@ export default function Index() {
           <div className="space-y-6">
             <div className="flex items-end justify-between">
               <div>
-                <p className="text-[25px] leading-[120%] tracking-[-0.8px] text-primary">
+                <p className="text-[18px] sm:text-[25px] leading-[120%] tracking-[-0.8px] text-primary">
                   ул. Земляной Вал, 9
                 </p>
-                <p className="text-[25px] leading-[120%] tracking-[-0.8px] text-primary">14:00</p>
+                <p className="text-[18px] sm:text-[25px] leading-[120%] tracking-[-0.8px] text-primary">14:00</p>
               </div>
               <div className="text-right">
-                <p className="text-[28px] leading-[120%] tracking-[-0.9px] text-primary">20.09.2025</p>
+                <p className="text-[20px] sm:text-[28px] leading-[120%] tracking-[-0.9px] text-primary">20.09.2025</p>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ export default function Index() {
               <button
                 type="button"
                 onClick={() => setShowDetails((s) => !s)}
-                className="w-full rounded-[12px] py-3 px-6 text-[18px] font-medium tracking-[-0.5px] text-[#E8F5E8] transition-all duration-300 bg-[#2D5A3D] hover:bg-[#4A7C59] active:-translate-y-px"
+                className="w-full rounded-[12px] py-3 px-6 text-[16px] sm:text-[18px] font-medium tracking-[-0.5px] text-[#E8F5E8] transition-all duration-300 bg-[#2D5A3D] hover:bg-[#4A7C59] active:-translate-y-px"
                 aria-expanded={showDetails}
               >
                 {showDetails ? "Скрыть детали" : "Показать детали"}
