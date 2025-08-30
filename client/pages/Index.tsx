@@ -94,7 +94,7 @@ export default function Index() {
                 className="w-full rounded-[12px] py-3 px-6 text-[16px] sm:text-[18px] font-medium tracking-[-0.5px] text-[#E8F5E8] transition-all duration-300 bg-[#2D5A3D] hover:bg-[#4A7C59] active:-translate-y-px"
                 aria-expanded={showDetails}
               >
-                {showDetails ? "Скрыть детали" : "Показа��ь детали"}
+                {showDetails ? "Скрыть детали" : "Показать детали"}
               </button>
             </div>
 
@@ -105,7 +105,7 @@ export default function Index() {
                     <DialogTitle className="text-primary">Детали</DialogTitle>
                   </DialogHeader>
                   <div className="mt-2 p-4 rounded-[12px] border" style={{ backgroundColor: "hsl(120 40% 97%)", borderColor: "hsl(var(--border))" }}>
-                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">О ресторане (О��терия Марио, м. Щёлковская)</h4>
+                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">О ресторане (Остерия Марио, м. Щёлковская)</h4>
                     <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
                       <li><span className="text-primary">Адрес:</span> Щёлковское ш., 75, ТРЦ «Щёлковский», 3 этаж</li>
                       <li><span className="text-primary">Метро:</span> Щёлковская</li>
