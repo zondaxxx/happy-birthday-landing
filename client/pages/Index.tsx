@@ -3,6 +3,20 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 
 export default function Index() {
   const [showDetails, setShowDetails] = useState(false);
+  const [photos, setPhotos] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (!showDetails || photos.length > 0) return;
+    (async () => {
+      try {
+        const res = await fetch("/api/osteria/photos");
+        const data = (await res.json()) as { images: string[] };
+        if (Array.isArray(data.images)) setPhotos(data.images);
+      } catch (e) {
+        // silent fail
+      }
+    })();
+  }, [showDetails]);
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
