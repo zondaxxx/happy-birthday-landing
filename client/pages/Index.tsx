@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 export default function Index() {
   const [showDetails, setShowDetails] = useState(false);
@@ -95,7 +96,7 @@ export default function Index() {
                   <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
                     <li><span className="text-primary">Адрес:</span> Щёлковское ш., 75, ТРЦ «Щёлковский», 3 этаж</li>
                     <li><span className="text-primary">Метро:</span> Щёлковская</li>
-                    <li><span className="text-primary">Телефон:</span> +7 (495) 790-70-90 доб. 223</li>
+                    <li><span className="text-primary">Телефон:</span> +7 (495) 790-70-90 д��б. 223</li>
                     <li><span className="text-primary">Часы:</span> Вс–Чт 10:00–22:00, Пт–Сб 10:00–23:00</li>
                     <li><span className="text-primary">Кухня:</span> итальянская, пицца, паста, антипасти</li>
                     <li><span className="text-primary">Сайт:</span> <a className="underline text-secondary" href="https://www.osteria-mario.com" target="_blank" rel="noreferrer">osteria-mario.com</a></li>
