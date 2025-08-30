@@ -91,10 +91,22 @@ export default function Index() {
                   <li>• Подтвердите участие до 18.09</li>
                 </ul>
                 <div className="mt-3 pt-3 border-t" style={{ borderColor: "hsl(var(--border))" }}>
-                  <p className="text-[14px] font-medium tracking-[-0.4px] text-primary">
-                    Контакт для вопросов:
-                  </p>
-                  <p className="text-[14px] tracking-[-0.4px] text-secondary">+7 (999) 123-45-67</p>
+                  <h5 className="text-[14px] font-semibold tracking-[-0.4px] text-primary mb-2">О ресторане (Остерия Марио, м. Щёлковская)</h5>
+                  <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
+                    <li><span className="text-primary">Адрес:</span> Щёлковское ш., 75, ТРЦ «Щёлковский», 3 этаж</li>
+                    <li><span className="text-primary">Метро:</span> Щёлковская</li>
+                    <li><span className="text-primary">Телефон:</span> +7 (495) 790-70-90 доб. 223</li>
+                    <li><span className="text-primary">Часы:</span> Вс–Чт 10:00–22:00, Пт–Сб 10:00–23:00</li>
+                    <li><span className="text-primary">Кухня:</span> итальянская, пицца, паста, антипасти</li>
+                    <li><span className="text-primary">Сайт:</span> <a className="underline text-secondary" href="https://www.osteria-mario.com" target="_blank" rel="noreferrer">osteria-mario.com</a></li>
+                  </ul>
+
+                  {/* Галерея: добавлю ссылки на фото после подтверждения источников */}
+                  <div className="mt-3 overflow-x-auto">
+                    <div className="flex gap-3 snap-x snap-mandatory">
+                      {/* Добавьте 3–5 ссылок на фото — я вставлю их сюда */}
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
