@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function Index() {
   const [showDetails, setShowDetails] = useState(false);
   const [photos, setPhotos] = useState<string[]>([]);
+  const [zoomSrc, setZoomSrc] = useState<string | null>(null);
   const staticPhotos = [
     "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F86d101502bdb4b67823967d5493c0c4a?format=webp&width=800",
     "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F3bf620bfdb3d4180aba53cea927dda06?format=webp&width=800",
@@ -111,7 +112,7 @@ export default function Index() {
                       <li><span className="text-primary">Метро:</span> Щёлковская</li>
                       <li><span className="text-primary">Телефон:</span> +7 (495) 790-70-90 доб. 223</li>
                       <li><span className="text-primary">Часы:</span> Вс–Чт 10:00–22:00, Пт–Сб 10:00–23:00</li>
-                      <li><span className="text-primary">Кухня:</span> итальянская, пицца, паста, антипасти</li>
+                      <li><span className="text-primary">Кухня:</span> итальянская, пицца, паста</li>
                       <li><span className="text-primary">Сайт:</span> <a className="underline text-secondary" href="https://www.osteria-mario.com" target="_blank" rel="noreferrer">osteria-mario.com</a></li>
                     </ul>
                     <div className="mt-4">
@@ -123,8 +124,9 @@ export default function Index() {
                               key={i}
                               src={src}
                               alt={`Остерия Марио фото ${i + 1}`}
-                              className="h-24 w-36 object-cover rounded-md snap-center border"
+                              className="h-24 w-36 object-cover rounded-md snap-center border cursor-zoom-in transition-transform hover:scale-[1.03]"
                               loading="lazy"
+                              onClick={() => setZoomSrc(src)}
                             />
                           ))}
                         </div>
@@ -142,6 +144,12 @@ export default function Index() {
                   </div>
                 </div>
                 </div>
+              </DialogContent>
+            </Dialog>
+
+            <Dialog open={!!zoomSrc} onOpenChange={(o) => !o && setZoomSrc(null)}>
+              <DialogContent className="max-w-3xl p-0 bg-black/80 sm:bg-background sm:p-2">
+                <img src={zoomSrc ?? ''} alt="Просмотр фото" className="w-full max-h-[80vh] object-contain rounded-md" />
               </DialogContent>
             </Dialog>
           </div>
