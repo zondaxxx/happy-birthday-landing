@@ -40,7 +40,7 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2Fa5e81d1a186e4e9680f767274db50827?format=webp&width=800"
                 alt="Birthday celebration"
-                className="w-full h-full object-cover object-[40%_60%]"
+                className="w-full h-full object-cover object-[40%_45%]"
               />
               <div
                 className="absolute"
