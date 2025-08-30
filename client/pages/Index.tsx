@@ -118,7 +118,7 @@ export default function Index() {
                       <h5 className="text-[14px] font-semibold tracking-[-0.4px] text-primary mb-2">Фотографии с Яндекс Карт</h5>
                       <div className="overflow-x-auto -mx-1 px-1">
                         <div className="flex gap-3 snap-x snap-mandatory">
-                          {photos.map((src, i) => (
+                          {[...staticPhotos, ...photos].map((src, i) => (
                             <img
                               key={i}
                               src={src}
