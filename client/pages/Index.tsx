@@ -4,6 +4,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function Index() {
   const [showDetails, setShowDetails] = useState(false);
   const [photos, setPhotos] = useState<string[]>([]);
+  const staticPhotos = [
+    "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F86d101502bdb4b67823967d5493c0c4a?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F3bf620bfdb3d4180aba53cea927dda06?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F1f3df45d00724e47a6e14e9a16cfbcb4?format=webp&width=800",
+  ];
 
   useEffect(() => {
     if (!showDetails || photos.length > 0) return;
@@ -100,7 +105,7 @@ export default function Index() {
                     <DialogTitle className="text-primary">Детали</DialogTitle>
                   </DialogHeader>
                   <div className="mt-2 p-4 rounded-[12px] border" style={{ backgroundColor: "hsl(120 40% 97%)", borderColor: "hsl(var(--border))" }}>
-                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">О ресторане (Остерия Марио, м. Щёлковская)</h4>
+                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">О ресторане (О��терия Марио, м. Щёлковская)</h4>
                     <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
                       <li><span className="text-primary">Адрес:</span> Щёлковское ш., 75, ТРЦ «Щёлковский», 3 этаж</li>
                       <li><span className="text-primary">Метро:</span> Щёлковская</li>
