@@ -10,3 +10,8 @@
 export interface DemoResponse {
   message: string;
 }
+
+export interface OsteriaPhotosResponse {
+  images: string[];
+  error?: string;
+}
