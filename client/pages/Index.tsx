@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 export default function Index() {
   const [showDetails, setShowDetails] = useState(false);
@@ -33,8 +38,14 @@ export default function Index() {
           className="absolute top-0 right-0 w-[300px] h-[200px] opacity-10"
           aria-hidden
         >
-          <path d="M150 50C150 77.614 172.386 100 200 100H300V0H200C172.386 0 150 22.386 150 50Z" fill="#2D5A3D" />
-          <path d="M75 150C75 177.614 97.386 200 125 200H300V100H125C97.386 100 75 122.386 75 150Z" fill="#4A7C59" />
+          <path
+            d="M150 50C150 77.614 172.386 100 200 100H300V0H200C172.386 0 150 22.386 150 50Z"
+            fill="#2D5A3D"
+          />
+          <path
+            d="M75 150C75 177.614 97.386 200 125 200H300V100H125C97.386 100 75 122.386 75 150Z"
+            fill="#4A7C59"
+          />
         </svg>
 
         <div className="relative z-10 h-full flex flex-col p-6 sm:p-8">
@@ -70,7 +81,8 @@ export default function Index() {
                   right: 0,
                   top: 664,
                   bottom: 0,
-                  backgroundImage: "linear-gradient(to right bottom, #2D5A3D, #4A7C59)",
+                  backgroundImage:
+                    "linear-gradient(to right bottom, #2D5A3D, #4A7C59)",
                   opacity: 0.1,
                 }}
               />
@@ -81,14 +93,21 @@ export default function Index() {
           <div className="space-y-6">
             <div className="flex items-end justify-between">
               <div>
-                <p className="text-[18px] sm:text-[25px] leading-[120%] tracking-[-0.8px] text-primary">14:00</p>
+                <p className="text-[18px] sm:text-[25px] leading-[120%] tracking-[-0.8px] text-primary">
+                  14:00
+                </p>
               </div>
               <div className="text-right">
-                <p className="text-[20px] sm:text-[28px] leading-[120%] tracking-[-0.9px] text-primary">20.09.2025</p>
+                <p className="text-[20px] sm:text-[28px] leading-[120%] tracking-[-0.9px] text-primary">
+                  20.09.2025
+                </p>
               </div>
             </div>
 
-            <div className="pt-4 border-t" style={{ borderColor: "hsl(var(--border))" }}>
+            <div
+              className="pt-4 border-t"
+              style={{ borderColor: "hsl(var(--border))" }}
+            >
               <button
                 type="button"
                 onClick={() => setShowDetails((s) => !s)}
@@ -105,18 +124,52 @@ export default function Index() {
                   <DialogHeader>
                     <DialogTitle className="text-primary">Детали</DialogTitle>
                   </DialogHeader>
-                  <div className="mt-2 p-4 rounded-[12px] border" style={{ backgroundColor: "hsl(120 40% 97%)", borderColor: "hsl(var(--border))" }}>
-                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">О ресторане (Остерия Марио, м. Щёлковская)</h4>
+                  <div
+                    className="mt-2 p-4 rounded-[12px] border"
+                    style={{
+                      backgroundColor: "hsl(120 40% 97%)",
+                      borderColor: "hsl(var(--border))",
+                    }}
+                  >
+                    <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">
+                      О ресторане (Остерия Марио, м. Щёлковская)
+                    </h4>
                     <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
-                      <li><span className="text-primary">Адрес:</span> Щёлковское ш., 75, ТРЦ «Щёлковский», 3 этаж</li>
-                      <li><span className="text-primary">Метро:</span> Щёлковская</li>
-                      <li><span className="text-primary">Телефон:</span> +7 (495) 790-70-90 доб. 223</li>
-                      <li><span className="text-primary">Часы:</span> Вс–Чт 10:00–22:00, Пт–Сб 10:00–23:00</li>
-                      <li><span className="text-primary">Кухня:</span> итальянская, пицца, паста</li>
-                      <li><span className="text-primary">Сайт:</span> <a className="underline text-secondary" href="https://www.osteria-mario.com" target="_blank" rel="noreferrer">osteria-mario.com</a></li>
+                      <li>
+                        <span className="text-primary">Адрес:</span> Щёлковское
+                        ш., 75, ТРЦ «Щёлковский», 3 этаж
+                      </li>
+                      <li>
+                        <span className="text-primary">Метро:</span> Щёлковская
+                      </li>
+                      <li>
+                        <span className="text-primary">Телефон:</span> +7 (495)
+                        790-70-90 доб. 223
+                      </li>
+                      <li>
+                        <span className="text-primary">Часы:</span> Вс–Чт
+                        10:00–22:00, Пт–Сб 10:00–23:00
+                      </li>
+                      <li>
+                        <span className="text-primary">Кухня:</span>{" "}
+                        итальянская, пицца, паста
+                      </li>
+                      <li>
+                        <span className="text-primary">Сайт:</span>{" "}
+                        <a
+                          className="underline text-secondary"
+                          href="https://www.osteria-mario.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          osteria-mario.com
+                        </a>
+                      </li>
                     </ul>
                     <div className="mt-4">
-                      <h5 className="text-[14px] font-semibold tracking-[-0.4px] text-primary mb-2">Фотографии с Яндекс Карт</h5>
+                      <h5 className="text-[14px] font-semibold tracking-[-0.4px] text-primary mb-2">
+                        Фотографии с Яндекс Карт
+                      </h5>
                       <div className="overflow-x-auto -mx-1 px-1">
                         <div className="flex gap-3 snap-x snap-mandatory">
                           {[...staticPhotos, ...photos].map((src, i) => (
@@ -130,26 +183,33 @@ export default function Index() {
                             />
                           ))}
                         </div>
-                    </div>
-                    <div className="mt-4">
-                      <a
-                        href="https://yandex.ru/maps/org/osteria_mario/82975400237?si=y5b38dyxgxtmdhh0v4g0hgy460"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center justify-center rounded-lg bg-[#2D5A3D] hover:bg-[#4A7C59] text-[#E8F5E8] px-4 py-2 text-sm font-medium"
-                      >
-                        Построить маршрут в Яндекс.Картах
-                      </a>
+                      </div>
+                      <div className="mt-4">
+                        <a
+                          href="https://yandex.ru/maps/org/osteria_mario/82975400237?si=y5b38dyxgxtmdhh0v4g0hgy460"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center justify-center rounded-lg bg-[#2D5A3D] hover:bg-[#4A7C59] text-[#E8F5E8] px-4 py-2 text-sm font-medium"
+                        >
+                          Построить маршрут в Яндекс.Картах
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </DialogContent>
             </Dialog>
 
-            <Dialog open={!!zoomSrc} onOpenChange={(o) => !o && setZoomSrc(null)}>
+            <Dialog
+              open={!!zoomSrc}
+              onOpenChange={(o) => !o && setZoomSrc(null)}
+            >
               <DialogContent className="max-w-3xl p-0 bg-black/80 sm:bg-background sm:p-2">
-                <img src={zoomSrc ?? ''} alt="Просмотр фото" className="w-full max-h-[80vh] object-contain rounded-md" />
+                <img
+                  src={zoomSrc ?? ""}
+                  alt="Просмотр фото"
+                  className="w-full max-h-[80vh] object-contain rounded-md"
+                />
               </DialogContent>
             </Dialog>
           </div>
@@ -157,9 +217,18 @@ export default function Index() {
 
         {/* Dots */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#2D5A3D" }} />
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#4A7C59" }} />
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#6B8E6B" }} />
+          <div
+            className="w-2 h-2 rounded-full"
+            style={{ backgroundColor: "#2D5A3D" }}
+          />
+          <div
+            className="w-2 h-2 rounded-full"
+            style={{ backgroundColor: "#4A7C59" }}
+          />
+          <div
+            className="w-2 h-2 rounded-full"
+            style={{ backgroundColor: "#6B8E6B" }}
+          />
         </div>
       </div>
     </div>
