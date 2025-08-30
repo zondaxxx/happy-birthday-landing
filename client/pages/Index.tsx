@@ -128,9 +128,19 @@ export default function Index() {
                             />
                           ))}
                         </div>
-                      </div>
+                    </div>
+                    <div className="mt-4">
+                      <a
+                        href="https://yandex.ru/maps/org/osteria_mario/82975400237?si=y5b38dyxgxtmdhh0v4g0hgy460"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center rounded-lg bg-[#2D5A3D] hover:bg-[#4A7C59] text-[#E8F5E8] px-4 py-2 text-sm font-medium"
+                      >
+                        Построить маршрут в Яндекс.Картах
+                      </a>
                     </div>
                   </div>
+                </div>
                 </div>
               </DialogContent>
             </Dialog>
