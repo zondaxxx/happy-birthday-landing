@@ -40,7 +40,7 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2Fe5f1f06da3804a0cae212b2b480205a0?format=webp&width=800"
                 alt="Birthday celebration"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[30%_50%]"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] opacity-10" />
             </div>
