@@ -60,9 +60,6 @@ export default function Index() {
           <div className="space-y-6">
             <div className="flex items-end justify-between">
               <div>
-                <p className="text-[18px] sm:text-[25px] leading-[120%] tracking-[-0.8px] text-primary">
-                  ул. Земляной Вал, 9
-                </p>
                 <p className="text-[18px] sm:text-[25px] leading-[120%] tracking-[-0.8px] text-primary">14:00</p>
               </div>
               <div className="text-right">
