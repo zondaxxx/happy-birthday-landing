@@ -51,8 +51,8 @@ export default function Index() {
         <div className="relative z-10 h-full flex flex-col p-6 sm:p-8">
           {/* Heading */}
           <div className="text-center mb-6">
-            <h3 className="text-[32px] font-normal leading-[120%] tracking-[-1px] text-primary">
-              Приглашение на день рождения
+            <h3 className="text-[32px] sm:text-[36px] leading-[120%] tracking-[-1px] text-primary font-display italic">
+              Приглашение на День Рождения
             </h3>
           </div>
 
@@ -61,8 +61,8 @@ export default function Index() {
             <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary mb-2">
               Анютке
             </h1>
-            <h2 className="text-[48px] sm:text-[76px] font-bold leading-[100%] tracking-[-2.3px] text-right text-secondary">
-              сегодня 18!
+            <h2 className="text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-right bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">
+              18
             </h2>
           </div>
 
@@ -94,7 +94,7 @@ export default function Index() {
             <div className="flex items-end justify-between">
               <div>
                 <p className="text-[18px] sm:text-[25px] leading-[120%] tracking-[-0.8px] text-primary">
-                  14:00
+                  16:00
                 </p>
               </div>
               <div className="text-right">
