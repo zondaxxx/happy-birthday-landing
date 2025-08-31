@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -30,6 +30,14 @@ export default function Index() {
   }, [showDetails]);
 
   const pattern = Array.from({ length: 48 });
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const [namePad, setNamePad] = useState(0);
+  useEffect(() => {
+    const update = () => setNamePad(nameRef.current?.offsetWidth || 0);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
@@ -58,27 +66,22 @@ export default function Index() {
             </h3>
           </div>
 
-          {/* Names with horizontal 18 accent */}
+          {/* Name and horizontal 18 accent below */}
           <div className="mb-6">
-            <div className="flex items-end gap-3">
-              <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary">
-                Анютке
-              </h1>
-              <div className="flex-1 overflow-hidden">
-                <div className="whitespace-nowrap leading-none">
-                  {Array.from({ length: 18 }).map((_, i) => (
-                    <span
-                      key={i}
-                      className="text-[40px] sm:text-[64px] font-extrabold tracking-[-2px] mr-2 select-none"
-                      style={{
-                        color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3],
-                        opacity: 0.35,
-                      }}
-                    >
-                      18
-                    </span>
-                  ))}
-                </div>
+            <h1 ref={nameRef} className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary">
+              Анютке
+            </h1>
+            <div className="mt-2 overflow-hidden" style={{ paddingLeft: namePad }}>
+              <div className="whitespace-nowrap leading-none">
+                {Array.from({ length: 20 }).map((_, i) => (
+                  <span
+                    key={i}
+                    className="text-[40px] sm:text-[64px] font-extrabold tracking-[-2px] mr-2 select-none"
+                    style={{ color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3], opacity: 0.35 }}
+                  >
+                    18
+                  </span>
+                ))}
               </div>
             </div>
           </div>
