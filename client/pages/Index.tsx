@@ -73,9 +73,29 @@ export default function Index() {
             <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary mb-2">
               Анютке
             </h1>
-            <h2 className="text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-right bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">
-              18
-            </h2>
+            <div className="relative text-right">
+              <span
+                aria-hidden
+                className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#2D5A3D]/25 translate-x-1 translate-y-1 select-none"
+              >
+                18
+              </span>
+              <span
+                aria-hidden
+                className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#4A7C59]/30 translate-x-2 translate-y-2 select-none"
+              >
+                18
+              </span>
+              <span
+                aria-hidden
+                className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#6B8E6B]/40 translate-x-3 translate-y-3 select-none"
+              >
+                18
+              </span>
+              <h2 className="relative text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">
+                18
+              </h2>
+            </div>
           </div>
 
           {/* Photo */}
@@ -152,7 +172,7 @@ export default function Index() {
                         ш., 75, ТРЦ «Щёлковский», 3 этаж
                       </li>
                       <li>
-                        <span className="text-primary">Ме��ро:</span> Щёлковская
+                        <span className="text-primary">Метро:</span> Щёлковская
                       </li>
                       <li>
                         <span className="text-primary">Телефон:</span> +7 (495)
