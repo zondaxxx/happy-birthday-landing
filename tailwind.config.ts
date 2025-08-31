@@ -27,7 +27,7 @@ export default {
           "Apple Color Emoji",
           "Segoe UI Emoji",
         ],
-        display: ['"Marck Script"', 'cursive'],
+        display: ['"Marck Script"', "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",

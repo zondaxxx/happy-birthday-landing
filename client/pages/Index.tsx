@@ -29,7 +29,6 @@ export default function Index() {
     })();
   }, [showDetails]);
 
-
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
       <div className="relative w-full max-w-[600px] h-[700px] sm:h-[750px] bg-background rounded-[25px] shadow-[0_12px_48px_rgba(45,90,61,0.25)] overflow-hidden">
@@ -63,9 +62,21 @@ export default function Index() {
               Анютке
             </h1>
             <div className="relative">
-              <span aria-hidden className="absolute inset-0 translate-x-1 translate-y-1 text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] text-[#2D5A3D]/25 select-none">18!</span>
-              <span aria-hidden className="absolute inset-0 translate-x-2 translate-y-2 text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] text-[#4A7C59]/30 select-none">18!</span>
-              <h2 className="relative text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">18!</h2>
+              <span
+                aria-hidden
+                className="absolute inset-0 translate-x-1 translate-y-1 text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] text-[#2D5A3D]/25 select-none"
+              >
+                18!
+              </span>
+              <span
+                aria-hidden
+                className="absolute inset-0 translate-x-2 translate-y-2 text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] text-[#4A7C59]/30 select-none"
+              >
+                18!
+              </span>
+              <h2 className="relative text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">
+                18!
+              </h2>
             </div>
           </div>
 
