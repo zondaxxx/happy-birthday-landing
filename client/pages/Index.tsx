@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -29,16 +29,6 @@ export default function Index() {
     })();
   }, [showDetails]);
 
-  const pattern = Array.from({ length: 48 });
-  const nameRef = useRef<HTMLHeadingElement>(null);
-  const [namePad, setNamePad] = useState(0);
-  useEffect(() => {
-    const update = () => setNamePad(nameRef.current?.offsetWidth || 0);
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
-  const startPad = Math.max(0, namePad - 700);
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
@@ -67,23 +57,21 @@ export default function Index() {
             </h3>
           </div>
 
-          {/* Name and horizontal 18 accent below */}
+          {/* Name with single 18! accent */}
           <div className="mb-6">
-            <h1 ref={nameRef} className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary">
+            <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary">
               Анютке
             </h1>
-            <div className="mt-2 overflow-hidden">
-              <div className="whitespace-nowrap leading-none" style={{ paddingLeft: startPad }}>
-                {Array.from({ length: 24 }).map((_, i) => (
-                  <span
-                    key={i}
-                    className="text-[44px] sm:text-[68px] font-extrabold tracking-[-2px] mr-3 select-none"
-                    style={{ color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3], opacity: 0.9 }}
-                  >
-                    18!
-                  </span>
-                ))}
-              </div>
+            <div className="relative mt-2 text-right">
+              <span aria-hidden className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#2D5A3D]/25 translate-x-1 translate-y-1 select-none">
+                18!
+              </span>
+              <span aria-hidden className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#4A7C59]/30 translate-x-2 translate-y-2 select-none">
+                18!
+              </span>
+              <h2 className="relative text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">
+                18!
+              </h2>
             </div>
           </div>
 
@@ -173,7 +161,7 @@ export default function Index() {
                       </li>
                       <li>
                         <span className="text-primary">Кухня:</span>{" "}
-                        итальянск��я, пицца, паста
+                        итальянская, пицца, паста
                       </li>
                       <li>
                         <span className="text-primary">Сайт:</span>{" "}
