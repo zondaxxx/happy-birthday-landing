@@ -38,7 +38,7 @@ export default function Index() {
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   }, []);
-  const startPad = Math.max(0, namePad - 420);
+  const startPad = Math.max(0, namePad - 700);
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
@@ -78,9 +78,9 @@ export default function Index() {
                   <span
                     key={i}
                     className="text-[44px] sm:text-[68px] font-extrabold tracking-[-2px] mr-3 select-none"
-                    style={{ color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3], opacity: 0.45 }}
+                    style={{ color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3], opacity: 0.9 }}
                   >
-                    18
+                    18!
                   </span>
                 ))}
               </div>
@@ -173,7 +173,7 @@ export default function Index() {
                       </li>
                       <li>
                         <span className="text-primary">Кухня:</span>{" "}
-                        итальянская, пицца, паста
+                        итальянск��я, пицца, паста
                       </li>
                       <li>
                         <span className="text-primary">Сайт:</span>{" "}
