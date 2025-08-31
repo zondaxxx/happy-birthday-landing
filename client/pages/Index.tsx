@@ -38,6 +38,7 @@ export default function Index() {
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   }, []);
+  const startPad = Math.max(0, namePad - 160);
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
@@ -71,13 +72,13 @@ export default function Index() {
             <h1 ref={nameRef} className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary">
               Анютке
             </h1>
-            <div className="mt-2 overflow-hidden" style={{ paddingLeft: namePad }}>
-              <div className="whitespace-nowrap leading-none">
-                {Array.from({ length: 20 }).map((_, i) => (
+            <div className="mt-2 overflow-hidden">
+              <div className="whitespace-nowrap leading-none" style={{ paddingLeft: startPad }}>
+                {Array.from({ length: 24 }).map((_, i) => (
                   <span
                     key={i}
-                    className="text-[40px] sm:text-[64px] font-extrabold tracking-[-2px] mr-2 select-none"
-                    style={{ color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3], opacity: 0.35 }}
+                    className="text-[44px] sm:text-[68px] font-extrabold tracking-[-2px] mr-3 select-none"
+                    style={{ color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3], opacity: 0.45 }}
                   >
                     18
                   </span>
