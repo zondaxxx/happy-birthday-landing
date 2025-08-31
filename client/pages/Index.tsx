@@ -58,8 +58,18 @@ export default function Index() {
             </h3>
           </div>
 
-          {/* Names */}
-          <div className="mb-6">
+          {/* Names with 18 pattern accent */}
+          <div className="mb-6 relative">
+            <div
+              className="pointer-events-none absolute inset-0 -z-10 rotate-[-8deg]"
+              style={{ WebkitMaskImage: "radial-gradient(circle at center, #fff, transparent 70%)", maskImage: "radial-gradient(circle at center, #fff, transparent 70%)" }}
+            >
+              <div className="grid grid-cols-6 gap-3 text-xl sm:text-3xl font-extrabold text-primary/10">
+                {pattern.map((_, i) => (
+                  <span key={i} className="select-none">18</span>
+                ))}
+              </div>
+            </div>
             <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary mb-2">
               Анютке
             </h1>
@@ -142,7 +152,7 @@ export default function Index() {
                         ш., 75, ТРЦ «Щёлковский», 3 этаж
                       </li>
                       <li>
-                        <span className="text-primary">Метро:</span> Щёлковская
+                        <span className="text-primary">Ме��ро:</span> Щёлковская
                       </li>
                       <li>
                         <span className="text-primary">Телефон:</span> +7 (495)
