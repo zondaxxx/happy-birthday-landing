@@ -59,7 +59,7 @@ export default function Index() {
 
           {/* Name and 18! in one row */}
           <div className="mb-6 flex items-baseline justify-between gap-3">
-            <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary whitespace-nowrap">
+            <h1 className="flex-1 mr-2 text-[64px] sm:text-[96px] font-bold leading-[100%] tracking-[0.06em] text-primary whitespace-nowrap">
               Анютке
             </h1>
             <div className="relative">
