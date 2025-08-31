@@ -58,43 +58,28 @@ export default function Index() {
             </h3>
           </div>
 
-          {/* Names with 18 pattern accent */}
-          <div className="mb-6 relative">
-            <div
-              className="pointer-events-none absolute inset-0 -z-10 rotate-[-8deg]"
-              style={{ WebkitMaskImage: "radial-gradient(circle at center, #fff, transparent 70%)", maskImage: "radial-gradient(circle at center, #fff, transparent 70%)" }}
-            >
-              <div className="grid grid-cols-6 gap-3 text-xl sm:text-3xl font-extrabold text-primary/10">
-                {pattern.map((_, i) => (
-                  <span key={i} className="select-none">18</span>
-                ))}
+          {/* Names with horizontal 18 accent */}
+          <div className="mb-6">
+            <div className="flex items-end gap-3">
+              <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary">
+                Анютке
+              </h1>
+              <div className="flex-1 overflow-hidden">
+                <div className="whitespace-nowrap leading-none">
+                  {Array.from({ length: 18 }).map((_, i) => (
+                    <span
+                      key={i}
+                      className="text-[40px] sm:text-[64px] font-extrabold tracking-[-2px] mr-2 select-none"
+                      style={{
+                        color: ["#2D5A3D", "#4A7C59", "#6B8E6B"][i % 3],
+                        opacity: 0.35,
+                      }}
+                    >
+                      18
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-            <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary mb-2">
-              Анютке
-            </h1>
-            <div className="relative text-right">
-              <span
-                aria-hidden
-                className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#2D5A3D]/25 translate-x-1 translate-y-1 select-none"
-              >
-                18
-              </span>
-              <span
-                aria-hidden
-                className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#4A7C59]/30 translate-x-2 translate-y-2 select-none"
-              >
-                18
-              </span>
-              <span
-                aria-hidden
-                className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#6B8E6B]/40 translate-x-3 translate-y-3 select-none"
-              >
-                18
-              </span>
-              <h2 className="relative text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">
-                18
-              </h2>
             </div>
           </div>
 
