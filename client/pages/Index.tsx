@@ -29,6 +29,8 @@ export default function Index() {
     })();
   }, [showDetails]);
 
+  const pattern = Array.from({ length: 48 });
+
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
       <div className="relative w-full max-w-[600px] h-[700px] sm:h-[750px] bg-background rounded-[25px] shadow-[0_12px_48px_rgba(45,90,61,0.25)] overflow-hidden">
