@@ -57,21 +57,15 @@ export default function Index() {
             </h3>
           </div>
 
-          {/* Name with single 18! accent */}
-          <div className="mb-6">
-            <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary">
+          {/* Name and 18! in one row */}
+          <div className="mb-6 flex items-baseline justify-between gap-3">
+            <h1 className="text-[56px] sm:text-[84px] font-bold leading-[100%] tracking-[-2.5px] text-primary whitespace-nowrap">
               Анютке
             </h1>
-            <div className="relative mt-2 text-right">
-              <span aria-hidden className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#2D5A3D]/25 translate-x-1 translate-y-1 select-none">
-                18!
-              </span>
-              <span aria-hidden className="absolute right-0 text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] text-[#4A7C59]/30 translate-x-2 translate-y-2 select-none">
-                18!
-              </span>
-              <h2 className="relative text-[72px] sm:text-[100px] font-extrabold leading-[100%] tracking-[-4px] bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">
-                18!
-              </h2>
+            <div className="relative">
+              <span aria-hidden className="absolute inset-0 translate-x-1 translate-y-1 text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] text-[#2D5A3D]/25 select-none">18!</span>
+              <span aria-hidden className="absolute inset-0 translate-x-2 translate-y-2 text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] text-[#4A7C59]/30 select-none">18!</span>
+              <h2 className="relative text-[64px] sm:text-[96px] font-extrabold tracking-[-4px] bg-gradient-to-br from-[#2D5A3D] to-[#4A7C59] text-transparent bg-clip-text">18!</h2>
             </div>
           </div>
 
