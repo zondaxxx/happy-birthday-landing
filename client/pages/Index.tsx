@@ -38,7 +38,7 @@ export default function Index() {
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   }, []);
-  const startPad = Math.max(0, namePad - 260);
+  const startPad = Math.max(0, namePad - 420);
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background font-sans">
