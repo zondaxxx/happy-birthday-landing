@@ -42,7 +42,10 @@ jobs:
         env:
           # Mark this as a CI build for Pages so Vite picks the correct base
           GITHUB_ACTIONS: 'true'
-        run: pnpm build
+        run: |
+          pnpm build
+          # SPA fallback for deep links on GitHub Pages
+          cp dist/spa/index.html dist/spa/404.html
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4

@@ -16,7 +16,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/**
+       * Use Vite's BASE_URL as React Router basename so GH Pages subpath works.
+       * Example: "/happy-birthday-landing/" -> basename "/happy-birthday-landing"
+       */}
+      <BrowserRouter basename={(import.meta.env.BASE_URL || "/").replace(/\/$/, "")}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
