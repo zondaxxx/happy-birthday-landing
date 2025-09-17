@@ -1,0 +1,18 @@
+name: happy-birthday-landing
+services:
+  - name: web
+    source_dir: ./
+    environment_slug: node-js
+    instance_size_slug: basic-xxs
+    instance_count: 1
+    http_port: 8080
+    build_command: pnpm install --frozen-lockfile && pnpm build
+    run_command: pnpm start
+    envs:
+      - key: NODE_ENV
+        value: production
+      - key: NIXPACKS_PNPM_VERSION
+        value: 10.14.0
+routes:
+  - path: /
+    service: web

@@ -5,6 +5,8 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Use root base path for production deployments (e.g., DigitalOcean App Platform)
+  base: "/",
   server: {
     host: "::",
     port: 8080,
