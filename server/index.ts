@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
-import { handleOsteriaPhotos } from "./routes/osteria";
+import { handlePavlinPhotos } from "./routes/pavlin";
 
 export function createServer() {
   const app = express();
@@ -19,7 +19,7 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
-  app.get("/api/osteria/photos", handleOsteriaPhotos);
+  app.get("/api/pavlin/photos", handlePavlinPhotos);
 
   return app;
 }

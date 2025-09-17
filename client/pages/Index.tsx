@@ -11,16 +11,16 @@ export default function Index() {
   const [photos, setPhotos] = useState<string[]>([]);
   const [zoomSrc, setZoomSrc] = useState<string | null>(null);
   const staticPhotos = [
-    "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F86d101502bdb4b67823967d5493c0c4a?format=webp&width=800",
-    "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F3bf620bfdb3d4180aba53cea927dda06?format=webp&width=800",
-    "https://cdn.builder.io/api/v1/image/assets%2F9069a1963a434c6c8964e76405250aaf%2F1f3df45d00724e47a6e14e9a16cfbcb4?format=webp&width=800",
+    "https://static.tildacdn.com/tild3535-6630-4630-b236-633661353839/-6C9A7727.jpg",
+    "https://static.tildacdn.com/tild6636-6564-4565-b632-333334643431/-6C9A7909.jpg",
+    "https://static.tildacdn.com/tild6233-3536-4831-b366-653632316162/-6C9A7965.jpg",
   ];
 
   useEffect(() => {
     if (!showDetails || photos.length > 0) return;
     (async () => {
       try {
-        const res = await fetch("/api/osteria/photos");
+        const res = await fetch("/api/pavlin/photos");
         const data = (await res.json()) as { images: string[] };
         if (Array.isArray(data.images)) setPhotos(data.images);
       } catch (e) {
@@ -146,43 +146,40 @@ export default function Index() {
                     }}
                   >
                     <h4 className="text-[16px] font-bold tracking-[-0.5px] text-primary mb-2">
-                      О ресторане (Остерия Марио, м. Щёлковская)
+                      О ресторане (Павлин 2.0, БЦ на Бакунинской)
                     </h4>
                     <ul className="text-[14px] leading-[140%] tracking-[-0.2px] text-secondary space-y-1 list-none">
                       <li>
-                        <span className="text-primary">Адрес:</span> Щёлковское
-                        ш., 75, ТРЦ «Щёлковский», 3 этаж
+                        <span className="text-primary">Адрес:</span> Бакунинская
+                        улица, 71
                       </li>
                       <li>
-                        <span className="text-primary">Метро:</span> Щёлковская
+                        <span className="text-primary">Метро:</span>
+                        Электрозаводская
                       </li>
                       <li>
                         <span className="text-primary">Телефон:</span> +7 (495)
-                        790-70-90 доб. 223
-                      </li>
-                      <li>
-                        <span className="text-primary">Часы:</span> Вс–Чт
-                        10:00–22:00, Пт–Сб 10:00–23:00
+                        191-82-83
                       </li>
                       <li>
                         <span className="text-primary">Кухня:</span>{" "}
-                        итальянская, пицца, паста
+                        узбекская, восточная, домашняя
                       </li>
                       <li>
                         <span className="text-primary">Сайт:</span>{" "}
                         <a
                           className="underline text-secondary"
-                          href="https://www.osteria-mario.com"
+                          href="https://pavlin20.ru"
                           target="_blank"
                           rel="noreferrer"
                         >
-                          osteria-mario.com
+                          pavlin20.ru
                         </a>
                       </li>
                     </ul>
                     <div className="mt-4">
                       <h5 className="text-[14px] font-semibold tracking-[-0.4px] text-primary mb-2">
-                        Фотографии с Яндекс Карт
+                        Фотографии из зала
                       </h5>
                       <div className="overflow-x-auto -mx-1 px-1">
                         <div className="flex gap-3 snap-x snap-mandatory">
@@ -190,7 +187,7 @@ export default function Index() {
                             <img
                               key={i}
                               src={src}
-                              alt={`Остерия Марио фото ${i + 1}`}
+                              alt={`Павлин 2.0 фото ${i + 1}`}
                               className="h-24 w-36 object-cover rounded-md snap-center border cursor-zoom-in transition-transform hover:scale-[1.03]"
                               loading="lazy"
                               onClick={() => setZoomSrc(src)}
@@ -200,12 +197,12 @@ export default function Index() {
                       </div>
                       <div className="mt-4">
                         <a
-                          href="https://yandex.ru/maps/org/osteria_mario/82975400237?si=y5b38dyxgxtmdhh0v4g0hgy460"
+                          href="https://yandex.ru/maps/org/pavlin_2_0/55323631871"
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex items-center justify-center rounded-lg bg-[#2D5A3D] hover:bg-[#4A7C59] text-[#E8F5E8] px-4 py-2 text-sm font-medium"
                         >
-                          Построить маршрут в Яндекс.Картах
+                          Построить маршрут
                         </a>
                       </div>
                     </div>

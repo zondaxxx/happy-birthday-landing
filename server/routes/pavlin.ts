@@ -1,9 +1,9 @@
 import type { RequestHandler } from "express";
 
 const DEFAULT_URL =
-  "https://yandex.ru/maps/org/osteria_mario/82975400237?si=y5b38dyxgxtmdhh0v4g0hgy460";
+  "https://yandex.ru/maps/org/pavlin_2_0/55323631871/?ll=37.691737%2C55.779697&z=16.73";
 
-export const handleOsteriaPhotos: RequestHandler = async (req, res) => {
+export const handlePavlinPhotos: RequestHandler = async (req, res) => {
   try {
     const target = (req.query.url as string) || DEFAULT_URL;
     const response = await fetch(target, {
