@@ -5,8 +5,13 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Use root base path for production deployments (e.g., DigitalOcean App Platform)
-  base: "/",
+  // Base path
+  // - Local dev and server-hosted prod (DO, etc.): "/"
+  // - GitHub Pages builds (CI provides GITHUB_REPOSITORY): "/<repo>/"
+  base:
+    process.env.GITHUB_REPOSITORY && process.env.GITHUB_ACTIONS === "true"
+      ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}/`
+      : "/",
   server: {
     host: "::",
     port: 8080,
